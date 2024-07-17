@@ -52,4 +52,3 @@ function runPromise() {
     }, delay);
   });
 }
-// test comment

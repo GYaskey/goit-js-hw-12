@@ -55,6 +55,7 @@ body {
 #datetime-picker:disabled {
   color: #808080;
   background: #fafafa;
+  background-color: #fb6464;
 }
 
 #datetime-picker:hover {
@@ -117,4 +118,75 @@ button[data-start]:hover {
 }
 .label {
   text-transform: uppercase;
+}
+
+input[name='delay'] {
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  border: 1px solid #808080;
+  width: 328px;
+  height: 40px;
+  outline: none;
+  margin-bottom: 30px;
+  color: #2e2f42;
+  font-family: Montserrat;
+  font-size: 16px;
+  letter-spacing: 0.64px;
+  padding: 0 16px;
+}
+
+input[name='delay']:hover {
+  border: 1px solid #000;
+}
+
+input[name='delay']:focus {
+  border: 1px solid #4e75ff;
+}
+
+fieldset {
+  width: 360px;
+  height: 64px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  margin: 0 0 24px;
+  padding: 0;
+}
+
+fieldset:hover {
+  border: 1px solid #000;
+}
+
+fieldset:checked {
+  border: 1px solid #000;
+}
+
+input[name='state'] {
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+button[type='submit'] {
+  display: flex;
+  width: 360px;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: #4e75ff;
+  border: none;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.64px;
+}
+button[type='submit']:hover {
+  background: #6c8cff;
 }

@@ -3,15 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homework 10</title>
+    <title>Homework 11</title>
     
     
-    <link rel="stylesheet" href="/goit-js-hw-10/assets/styles-e3830f0e.css">
+    <script type="module" crossorigin src="/goit-js-hw-11/commonHelpers.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/vendor-b20c67ea.js">
+    <link rel="stylesheet" href="/goit-js-hw-11/assets/vendor-1cd1f9d9.css">
+    <link rel="stylesheet" href="/goit-js-hw-11/assets/index-e3830f0e.css">
   </head>
   <body>
-    <ul>
-      <li class="task"><a href="./1-timer.html">Timer</a></li>
-      <li class="task"><a href="./2-snackbar.html">Snackbar</a></li>
-    </ul>
+    <form class="form">
+      <input
+        type="text"
+        id="searchInput"
+        name="search-input"
+        class="search-input"
+        placeholder="Search images..."
+      />
+      <button type="submit" class="btn">Search</button>
+    </form>
+
+    <ul class="img-list"></ul>
+    
   </body>
 </html>

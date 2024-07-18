@@ -3,14 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homework 10</title>
+    <title>Homework 11</title>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <ul>
-      <li class="task"><a href="./1-timer.html">Timer</a></li>
-      <li class="task"><a href="./2-snackbar.html">Snackbar</a></li>
-    </ul>
+    <form class="form">
+      <input
+        type="text"
+        id="searchInput"
+        name="search-input"
+        class="search-input"
+        placeholder="Search images..."
+      />
+      <button type="submit" class="btn">Search</button>
+    </form>
+
+    <ul class="img-list"></ul>
+    <script type="module" src="./main.js"></script>
   </body>
 </html>

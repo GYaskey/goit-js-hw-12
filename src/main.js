@@ -18,6 +18,7 @@ refs.form.addEventListener('submit', onFormSubmit);
 
 function onFormSubmit(e) {
   e.preventDefault();
+  refs.list.innerHTML = '';
   const query = e.target.elements.searchInput.value.trim();
   if (query === '') {
     iziToast.error({
@@ -47,18 +48,22 @@ function onFormSubmit(e) {
           messageColor: '#fff',
           titleColor: '#fff',
         });
-        return;
+        refs.loader.classList.add('visually-hidden');
+        return '';
       }
 
       return renderImages(qRes);
     })
+    .then()
     .then(markup => {
-      refs.list.innerHTML = markup;
-      refs.loader.classList.add('visually-hidden');
-      new SimpleLightbox('.img-list a', {
-        captionsData: 'alt',
-        captionDelay: 250,
-      });
+      if (markup) {
+        refs.list.innerHTML = markup;
+        refs.loader.classList.add('visually-hidden');
+        new SimpleLightbox('.img-list a', {
+          captionsData: 'alt',
+          captionDelay: 250,
+        }).refresh();
+      }
     })
     .catch(error => {
       iziToast.error({

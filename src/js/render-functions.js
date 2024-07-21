@@ -1,4 +1,8 @@
 export function renderImages(arr) {
+  if (!arr || arr.hits.length === 0) {
+    return '';
+  }
+
   return arr.hits
     .map(image => {
       return `<li class="img-item">

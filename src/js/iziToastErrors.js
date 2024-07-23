@@ -36,3 +36,15 @@ export function globalErr(error) {
     titleColor: '#fff',
   });
 }
+
+export function noMoreImg() {
+  iziToast.info({
+    title: 'Oops',
+    message: `We're sorry, but you've reached the end of search results.`,
+    position: 'topRight',
+    backgroundColor: 'rgba(151, 255, 245)',
+    iconColor: '#000',
+    messageColor: '#000',
+    titleColor: '#000',
+  });
+}
